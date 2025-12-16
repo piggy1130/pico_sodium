@@ -23,3 +23,4 @@ make -j4
    
 
 
+sudo openocd -f ~/pico/pico/raspberrypi5-swd.cfg -f target/rp2040.cfg -c "program blink.elf verify reset exit"  
