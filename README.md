@@ -1,3 +1,7 @@
+# Guidance Book  
+https://www.laskakit.cz/user/related_files/getting-started-with-pico.pdf  
+
+# Work Procedure  
 * **Step 1**:
 run "pico_setup.sh" bash file.
 
