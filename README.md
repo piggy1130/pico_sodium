@@ -12,19 +12,23 @@ create a project foler - such as: "blink"
 Inside of folder:
     * create c program: "blink.c"
     * create file: "CMakeLists.txt"
-* **Command**:  
-makedir build  
-cd build  
-cmake ..  
-make -j4  
+* **Step 4: Command**:  
+   makedir build  
+   cd build  
+   cmake ..  
+   make -j4  
 
-* **Push file to Pico**
-  button -- easy
+* **Step 5:**  Push file to Pico
+     * method 1: Unplug --> Holding Button --> Plug: easy but much labor work.  
+     * method 2: Push file to Pico with command, need to wire lines
+       <img width="518" height="316" alt="Screenshot 2025-12-16 110847" src="https://github.com/user-attachments/assets/ea7520e5-35c3-4a57-9e12-d6f721792f65" />
+* **Step 6: ** Command to send file from Pi to Pico  
+   * if using Rasperry Pi 5:
+     command: sudo openocd -f ~/pico/pico/raspberrypi5-swd.cfg -f target/rp2040.cfg -c "program blink.elf verify reset exit"  
+     <img width="800" height="326" alt="Screenshot 2025-12-16 112053" src="https://github.com/user-attachments/assets/ca1b0d60-c730-478d-aebd-3dbd5e6df3dd" />
 
-  non-button  
-1. need wire pi and pico based on the guidance book
-2. check the device connect to pico is pi4 or pi5, with different command
-   
+   * if using Raspberry Pi 4:
+     command: check the guidance book, something like
+     <img width="537" height="40" alt="Screenshot 2025-12-16 112222" src="https://github.com/user-attachments/assets/50176ce7-1457-4875-b8a1-99a28f7ab12d" />
 
 
-sudo openocd -f ~/pico/pico/raspberrypi5-swd.cfg -f target/rp2040.cfg -c "program blink.elf verify reset exit"  
