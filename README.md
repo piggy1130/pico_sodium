@@ -13,7 +13,7 @@ Inside of folder:
     * create c program: "blink.c"
     * create file: "CMakeLists.txt"
 * **Step 4: Command**:  
-   makedir build  
+   mkdir build  
    cd build  
    cmake ..  
    make -j4  
